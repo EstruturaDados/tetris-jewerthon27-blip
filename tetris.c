@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 // Desafio Tetris Stack
 // Tema 3 - Integração de Fila e Pilha
 // Este código inicial serve como base para o desenvolvimento do sistema de controle de peças.
