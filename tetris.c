@@ -5,6 +5,11 @@
 // Tema 3 - Integração de Fila e Pilha
 // Este código inicial serve como base para o desenvolvimento do sistema de controle de peças.
 // Use as instruções de cada nível para desenvolver o desafio.
+typedef struct {
+        char tipo; 
+        int id; 
+} Peca;
+#define MAX_FILA 5
 
 int main() {
 
@@ -19,9 +24,8 @@ int main() {
     //      1 - Jogar peça (remover da frente)
     //      0 - Sair
     // - A cada remoção, insira uma nova peça ao final da fila.
-
-
-
+    
+    
     // 🧠 Nível Aventureiro: Adição da Pilha de Reserva
     //
     // - Implemente uma pilha linear com capacidade para 3 peças.
