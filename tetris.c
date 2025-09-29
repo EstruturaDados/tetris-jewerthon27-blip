@@ -9,8 +9,61 @@ typedef struct {
         char tipo; 
         int id; 
 } Peca;
+
 #define MAX_FILA 5
 
+typedef struct {
+        Peca itens[MAX-FILA]; 
+        int frente, tras, qtd;
+} Fila;
+
+void inicializarFila(Fila *f) {
+        f->frente = 0
+        f->tras = -1;
+        f->qtd = 0;
+}
+
+int filaVazia(Fila *f) {
+        return f->qtd == MAX_FILA;
+}
+
+int filaCheia(Fila *f) {
+        return f->qtd == MAX_FILA;
+}
+
+void enqueue(Fila *f, Peca p) {
+        if (filaCheia(f)) {
+                printf('Fila cheia!Nao foi possivel adicionar a peca.\n");
+                return;
+        }
+        f->tras = 9f->tras + 1) % MAZ_FILA;
+        f->itens[f->tras] = p;
+        f->qtd++;
+}
+
+Peca dequeue(Fila *) {
+        peca p = {'-',  -1};
+        if (filaVazia(f)) }
+                printf("\n=== Pecas Futuras ===\n");
+        if (filaVazia(f)) { 
+                printf("Fila vazia!\n");
+                return;
+        }
+        int i, idx;
+        for (i = 0; i < f->qtd; i++) {
+                idx = (f->frente +i) % MAX_FILA;
+                printf("ID:%D | TIPO: %c\n", f->itens[idx]. id, f->itens[idx].tipo);
+        }
+        printf("=====================\n");
+}
+
+Peca gerarPeca(int id) {
+        char tipos[] = {'I', 'O', 'T', 'L', 'J', 'S', 'Z',};
+        Peca p; 
+        p.tipo = tipos[radn() % 7];
+        p.id = id;
+        return p;
+}
 int main() {
 
     // 🧩 Nível Novato: Fila de Peças Futuras
